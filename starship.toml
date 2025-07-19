@@ -1,0 +1,58 @@
+# Use a nerd font to see all icons properly! (like FiraCode Nerd Font)
+add_newline = true
+
+format = """
+[](#282c34)\
+$username\
+[](bg:#61afef fg:#282c34)\
+$directory\
+[](fg:#61afef bg:#98c379)\
+$git_branch\
+$git_status\
+[](fg:#98c379 bg:#e5c07b)\
+$nodejs\
+$php\
+$python\
+[](fg:#e5c07b bg:#c678dd)\
+$time\
+[ ](fg:#c678dd)\
+"""
+
+[username]
+show_always = true
+style_user = "bg:#282c34 fg:#61afef"
+format = "[   $user ]($style)"
+
+[directory]
+style = "bg:#61afef fg:#282c34"
+format = "[   $path ]($style)"
+truncation_length = 3
+
+[git_branch]
+style = "bg:#98c379 fg:#282c34"
+format = "[  $branch ]($style)"
+
+[git_status]
+style = "bg:#98c379 fg:#282c34"
+format = '([\[$all_status$ahead_behind\]]($style))'
+
+[nodejs]
+style = "bg:#e5c07b fg:#282c34"
+format = "[  $version ]($style)"
+disabled = false
+
+[php]
+style = "bg:#e5c07b fg:#282c34"
+format = "[ 🐘 $version ]($style)"
+disabled = false
+
+[python]
+style = "bg:#e5c07b fg:#282c34"
+format = "[  $version ]($style)"
+disabled = false
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "bg:#c678dd fg:#282c34"
+format = "[  $time ]($style)"
